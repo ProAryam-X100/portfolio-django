@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="{% static 'portfolio/Aryam.ico' %}" type="image/x-icon" />
+  <title>{% block title %}موقعي الشخصي{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/script.js"></script>
+
+
+
+
+
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+
+    <footer>
+  <p>© 2025 Aryam Aseiri – All rights reserved</p>
+</footer>
+</body>
+</html>

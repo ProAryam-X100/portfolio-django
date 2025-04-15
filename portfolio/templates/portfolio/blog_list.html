@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% extends 'portfolio/base.html' %}
+{% for blog in blogs %}
+
+{% block content %}
+<section id="blog-list" class="cards-section">
+  <div class="container">
+    <h1 class="section-title">All Articles</h1>
+
+{% for blog in blogs %}
+      <div class="card">
+        <a href="{% url 'blog_detail' blog.pk %}">Viwe</a>
+  <h2>{{ blog.title }}</h2>
+        <p>{{ blog.content|truncatewords:30 }}</p>
+        <p><small>Published: {{ blog.created_at }}</small></p>
+      </div>
+    {% empty %}
+      <p>No articles yet.</p>
+    {% endfor %}
+  </div>
+
+</section>
+{% endblock %}

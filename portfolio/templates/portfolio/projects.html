@@ -1,0 +1,50 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="cards-section">
+<h1>المشاريع <i class="fas fa-code"></i></h1>
+        <p> هنا ستجد مجموعة من مشاريعي في البرمجة والذكاء الاصطناعي وتحليل البيانات</p>
+
+  <div class="cards-container">
+      <div class="card">
+        <img src="{% static 'portfolio/project1.jpg' %}" alt="Project Image">
+        <h3>Ai Mindmap Generator</h3>
+                    <p> أداة ذكاء الاصطناعي لإنشاء مخططات ذهنية (Mind Maps) بناءً على مدخلات نصية من المستخدم لمساعدة المستخدمين في تنظيم الأفكار والمفاهيم بشكل مرئي  </p>
+
+        <a href="https://colab.research.google.com/drive/13uNORZvtb50iZtWOjqMqxzyeigpW8cQa?usp=sharing">عرض المشروع</a>
+      </div>
+      <div class="card">
+          <img src="{% static 'portfolio/project2.jpg' %}" alt="Project Image">
+        <h3>image classification</h3>
+          <p> نموذج ذكاء اصطناعي قادر على تصنيف الصور باستخدام محول الرؤية (ViT) المدرب مسبقا في تطبيق Hugging Face يمكن استخدامه لتصنيف الصور إلى فئات مختلفة
+          </p>
+        <a href="https://colab.research.google.com/drive/1I2TKsuRt7aZMDidWfFNU-f04fahsZZ3l?usp=sharing">عرض المشروع</a>
+      </div>
+     <div class="card">
+        <img src="{% static 'portfolio/project3.jpg' %}" alt="Project Image">
+        <h3>Describing images with audio</h3>
+                    <p>  نظام ذكاء اصطناعي يقوم بتحليل الصور والتعرف عليها  وتوليد وصف نصي لها وترجمته إلى اللغة العربية (اختياري) ثم تحويل النص إلى صوت </p>
+
+        <a href="https://colab.research.google.com/drive/1mUKbuk5KDqTPKA3L-9z_iK_VruayQn8F?usp=sharing">عرض المشروع</a>
+      </div>
+<div class="card">
+        <img src="{% static 'portfolio/Dates.jpg' %}" alt="Project Image">
+        <h3>Dates Classification</h3>
+                    <p>نموذج ذكاء اصطناعي يقوم بتحليل صور التمور وتصنيف أنواعها بناءً على الشكل واللون و إمكانية تدريب النموذج على بيانات جديدة لتحسين دقته (اختياري)</p>
+
+        <a href="https://colab.research.google.com/drive/1okHTl95DYSH_Qz9R7qvzdWtkg3XHBYh5?usp=sharing">عرض المشروع</a>
+      </div>
+
+          </section>
+<section class="cards-section">
+<div class="card">
+        <img src="{% static 'portfolio/project4.jpg' %}" alt="Project Image">
+        <h3>Ministry of Health Dashboard</h3>
+                    <p>تحليل بيانات ميزانية وزارة الصحة خلال الأعوام (2007–2023) يقوم بعرض التغيرات والأنماط في الإنفاق الصحي باستخدام لوحة معلومات تفاعلية تساعد على فهم البيانات </p>
+
+        <a href="https://drive.google.com/file/d/14YJYFkWifvz0pqqKr-LPgLUlAlVnh4XY/view?usp=drivesdk">عرض المشروع</a>
+      </div>
+          </section>
+
+{% endblock %}

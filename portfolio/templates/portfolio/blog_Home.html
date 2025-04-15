@@ -1,0 +1,11 @@
+{% for article in articles %}
+  <div class="article-card">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+
+    <a href="{% url 'blog_detail' article.id %}">View</a>
+    <a href="{% url 'blog_update' blog.pk %}" class="btn">Edit</a>
+<a href="{% url 'blog_delete' blog.pk %}" class="btn btn-danger" style="margin-left: 10px;">Delete</a>
+
+  </div>
+{% endfor %}

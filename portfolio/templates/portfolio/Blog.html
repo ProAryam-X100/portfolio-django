@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Blog</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f2f2f2; }
+        form { background: #fff; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; }
+        input, textarea, button { width: 100%; margin-bottom: 15px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Add New Blog Article</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

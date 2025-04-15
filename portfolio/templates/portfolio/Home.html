@@ -1,0 +1,599 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}الرئيسية{% endblock %}
+{% block content %}
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<header class="navbar">
+    <div class="container">
+        <nav class="nav-links">
+
+
+      <a href="{% url 'Home' %}#Contact"><i class=""></i> Contact Me</a>
+          <a href="{% url 'Home' %}#Blog"><i class=""></i> Articles</a>
+          <a href="{% url 'Home' %}#Projects"><i class=""></i> Projects</a>
+          <a href="{% url 'Home' %}#Skill"><i class=""></i>Skills</a>
+          <a href="{% url 'Home' %}"><i class=""></i> Home</a>
+      </nav>
+
+      <!-- أيقونة القائمة للجوال -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- الشعار -->
+      <div class="site-logo">Portfolio</div>
+    </div>
+
+
+   </header>
+
+<section class="hero hero-intro">
+        <h3 class="fade-in">Hello, I'm</h3>
+    <h1 class="fade-in">ARYAM ASEIRI</h1>
+    <h class="fade-in">Computer Science student focused on Data Analysis and AI <br>
+        I’m passionate about enriching Arabic technical content and developing innovative projects <br>
+        This space reflects my tech journey, where I share my articles, projects, and experiences</h>
+
+    <div  class="contact-container">
+  <a href="mailto:aryamaseiri@gmail.com" class="contact-box" target="_blank">
+    <img src="{% static 'portfolio/mail.svg' %}" alt="Email">
+    <span>Email</span>
+  </a>
+
+  <a href="https://www.linkedin.com/in/aryamaseiri" class="contact-box" target="_blank">
+    <img src="{% static 'portfolio/linkedin.svg' %}" alt="LinkedIn">
+    <span>Linkedin</span>
+  </a>
+</div>
+
+<style>
+.contact-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.contact-box {
+transition: filter 0.3s ease;
+  filter: brightness(0) invert(1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+</style>
+    </section>
+
+    <div class="info-box" data-aos="fade-up" data-aos-delay="200"></div>
+
+
+
+<style>
+    body {
+    background-color: #091724;
+    color: white;
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* قسم التعريف */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.about-text {
+    margin-bottom: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 55px;
+  height: 55px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon img {
+  width: 28px;
+  height: 28px;
+  transition: filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+
+.social-icon {
+  color: white;
+}
+
+.social-icon:hover {
+  color: black;
+}
+
+
+</style>
+ <section class="hero">
+  <div class="hero-intro">
+  </div>
+</section>
+
+
+<!--
+    <section id="About">
+  <section class="about-container">
+    <div class="about-text fade-in delay-2">
+      <h1>About</h1>
+      <p>
+        I am <strong>Aryam Aseiri</strong>, a Computer Science student focused on Data Analysis and AI <br>
+        I’m passionate about enriching Arabic technical content and developing innovative projects <br>
+        This space reflects my tech journey, where I share my articles, projects, and experiences
+      </p>
+    </div>
+
+       <div class="social-icons">
+  <a href="mailto:aryamaseiri@gmail.com" class="social-icon" target="_blank">
+    <img src="{% static 'portfolio/mail.svg' %}" alt="Email">
+  </a>
+  <a href="https://github.com/ProAryam-X100" class="social-icon" target="_blank">
+    <img src="{% static 'portfolio/github.svg' %}" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/aryamaseiri" class="social-icon" target="_blank">
+    <img src="{% static 'portfolio/linkedin.svg' %}" alt="LinkedIn">
+  </a>
+  <a href="https://x.com/ill_Ar100?t=t5L0TcxJanNcci84STBQTg&s=09" class="social-icon" target="_blank">
+    <img src="{% static 'portfolio/twitter.svg' %}" alt="X (Twitter)">
+  </a>
+</div>
+  </section>
+ </section>
+
+-->
+ <section class="skills">
+  <h1>Skills <i class=""></i></h1>
+
+  <div class="skills-grid">
+
+    <div class="card experience">
+      <i class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+</svg>
+
+      </i>
+      <h3>Experience</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Bootstrap</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="card experience">
+      <i class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+        </svg>
+      </i>
+      <h3>Work</h3>
+      <ul>
+        <li>Researcher</li>
+      </ul>
+    </div>
+
+    <div class="card experience">
+      <i class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+
+        </svg>
+      </i>
+      <h3>Education</h3>
+      <ul>
+        <li>Computer Science</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+            <h1>Projects <i class=""></i></h1>
+
+    <div class="card-container">
+
+
+  <!-- 🟦 Project 1 -->
+  <div class="project-card">
+
+    <img src="{% static 'portfolio/Dates1.jpg' %}" alt="Dates Project">
+      <span class="coming-soon">Dal challenge</span>
+    <div class="project-content">
+      <div class="project-title">Dates Classification</div>
+      <div class="project-description">
+this challenge is create artificial intelligence model that analyzes images of dates and classifies their types based on shape and color, with the ability to train the model on new data to improve its accuracy (optional)      </div>
+      <div class="tags">
+        <span>Image Classification with CNN</span>
+                  <span>Dealing with keggle challenges</span>
+                  <span>Manage datasets</span>
+
+                </div>
+
+
+<a href="https://colab.research.google.com" class="browse-btn" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+    <path d="M3.9,12c0-2.03,1.65-3.68,3.68-3.68h3.61v1.5H7.58c-1.2,0-2.18,0.98-2.18,2.18s0.98,2.18,2.18,2.18h3.61v1.5H7.58
+      C5.55,15.68,3.9,14.03,3.9,12z M8.83,13.25h6.33v-2.5H8.83V13.25z M16.42,8.32h-3.61v1.5h3.61c1.2,0,2.18,0.98,2.18,2.18
+      s-0.98,2.18-2.18,2.18h-3.61v1.5h3.61c2.03,0,3.68-1.65,3.68-3.68S18.45,8.32,16.42,8.32z"/>
+  </svg>
+  Google Colab
+</a>
+      </div>
+
+
+
+    </div>
+
+  <!-- 🟨 Project 2 -->
+        <div class="project-card">
+    <img src="{% static 'portfolio/project2.jpg' %}" alt="Project 2">
+      <span class="coming-soon">tuwaiq academy</span>
+    <div class="project-content">
+      <div class="project-title">Image Classification</div>
+      <div class="project-description">
+AI model that classifies images into different categories using a pre-trained vision transducer (ViT) The model can identify different objects such as fruits, clothing, and even medical conditions in X-ray images
+      </div>
+      <div class="tags">
+        <span>Work with the Hugging Face library and load pre-trained Models</span>
+                            <span>Deep Learning and Model Training</span>
+
+                  <span>Rate photos with ViT</span>
+
+
+                          </div>
+
+          <a href="https://colab.research.google.com/github/ProAryam-X100/Image-classification-project-using-Vision-Transformer-ViT-in-Hugging-Face-/blob/main/image_classification_project_using_vision_transformer_vit_in_hugging_face.ipynb" class="browse-btn" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+    <path d="M3.9,12c0-2.03,1.65-3.68,3.68-3.68h3.61v1.5H7.58c-1.2,0-2.18,0.98-2.18,2.18s0.98,2.18,2.18,2.18h3.61v1.5H7.58
+      C5.55,15.68,3.9,14.03,3.9,12z M8.83,13.25h6.33v-2.5H8.83V13.25z M16.42,8.32h-3.61v1.5h3.61c1.2,0,2.18,0.98,2.18,2.18
+      s-0.98,2.18-2.18,2.18h-3.61v1.5h3.61c2.03,0,3.68-1.65,3.68-3.68S18.45,8.32,16.42,8.32z"/>
+  </svg>
+  Google Colab
+</a>
+    </div>
+        </div>
+
+  <div class="project-card">
+
+    <img src="{% static 'portfolio/project4.jpg' %}" alt="Dates Project">
+      <span class="coming-soon">Power BI Challenge</span>
+    <div class="project-content">
+      <div class="project-title">MOH Budget Analysis</div>
+      <div class="project-description">
+this challenge is create artificial intelligence model that analyzes images of dates and classifies their types based on shape and color, with the ability to train the model on new data to improve its accuracy (optional)      </div>
+      <div class="tags">
+        <span>use power bi</span>
+                  <span>Health Data Analysis</span>
+                  <span>Create DAX orders</span>
+
+                </div>
+
+<a href="https://colab.research.google.com" class="browse-btn" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+    <path d="M3.9,12c0-2.03,1.65-3.68,3.68-3.68h3.61v1.5H7.58c-1.2,0-2.18,0.98-2.18,2.18s0.98,2.18,2.18,2.18h3.61v1.5H7.58
+      C5.55,15.68,3.9,14.03,3.9,12z M8.83,13.25h6.33v-2.5H8.83V13.25z M16.42,8.32h-3.61v1.5h3.61c1.2,0,2.18,0.98,2.18,2.18
+      s-0.98,2.18-2.18,2.18h-3.61v1.5h3.61c2.03,0,3.68-1.65,3.68-3.68S18.45,8.32,16.42,8.32z"/>
+  </svg>
+  Google Colab
+</a>
+      </div>
+
+
+
+    </div>
+
+        </div>
+
+
+<style>
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+     align-items: stretch;
+  }
+
+
+  .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1c182b;
+  border-radius: 16px;
+  color: white;
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .project-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .project-date {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    margin-bottom: 5px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+
+  .tags span {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+
+
+
+  .browse-btn {
+  display: inline-flex;
+  align-items: center;
+    background-color: #13140f;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .browse-btn:hover {
+    background-color: #3a364a;
+  }
+</style>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<section id="Blog">
+  <section class="cards-section">
+    <h1>Articles</h1>
+
+    <!-- زر لإضافة مقال جديد -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <a href="{% url 'blog_create' %}" class="btn">create new article</a>
+    </div>
+
+    <!-- عرض المقالات -->
+    <div class="cards-section">
+      {% for blog in blogs %}
+        <div class="card">
+          {% if blog.image %}
+            <img src="{{ blog.image.url }}" alt="Article Image">
+          {% endif %}
+          <h3>{{ blog.title }}</h3>
+          <p>{{ blog.content|truncatewords:20 }}</p>
+
+          <a href="{% url 'blog_detail' blog.id %}" class="btn">Read</a>
+          <a href="{% url 'blog_update' blog.pk %}" class="btn">Update</a>
+<a href="{% url 'blog_delete' blog.pk %}" class="btn btn-danger" style="margin-left: 10px;">Delete</a>
+
+        </div>
+      {% empty %}
+        <p>There are no articles currently</p>
+      {% endfor %}
+    </div>
+  </section>
+</section>
+<style>
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.blog-container h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #222;
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.blog-content {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.blog-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.blog-buttons a {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.blog-buttons .edit {
+    background-color: #4CAF50;
+}
+
+.blog-buttons .edit:hover {
+    background-color: #45a049;
+}
+
+.blog-buttons .delete {
+    background-color: #f44336;
+}
+
+.blog-buttons .delete:hover {
+    background-color: #d32f2f;
+}
+</style>
+
+
+
+
+
+<section id="Contact">
+  <section class="Contact">
+    <h1>Contact Me <i class=""></i></h1>
+
+
+    <div class="social-icons">
+      <a href="mailto:aryamaseiri@gmail.com" class="social-icon" target="_blank">
+        <img src="{% static 'portfolio/mail.svg' %}" alt="Email">
+      </a>
+      <a href="https://github.com/ProAryam-X100" class="social-icon" target="_blank">
+        <img src="{% static 'portfolio/github.svg' %}" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/aryamaseiri" class="social-icon" target="_blank">
+        <img src="{% static 'portfolio/linkedin.svg' %}" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/ill_Ar100?t=t5L0TcxJanNcci84STBQTg&s=09" class="social-icon" target="_blank">
+        <img src="{% static 'portfolio/twitter.svg' %}" alt="X (Twitter)">
+      </a>
+    </div>
+
+<form class="contact-form">
+    {% csrf_token %}
+
+<input type="text" placeholder="Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Your Message" required></textarea>
+
+<button type="submit">send</button>
+</form>
+
+{% if success %}
+  <p style="color: green;">Message sent successfully!</p>
+{% endif %}
+
+
+
+
+  </section>
+</section>
+
+
+
+
+{% endblock %}

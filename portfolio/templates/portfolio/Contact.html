@@ -1,0 +1,69 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<section class="contact">
+<h1>تواصل معي <i class="fas fa-envelope"></i></h1>
+    <p>يمكنك التواصل معي عبر البريد الإلكتروني أو منصات التواصل الاجتماعي</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="اسمك" required>
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+</section>
+
+<style>
+    .contact-form {
+        padding: 30px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 500px;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px;
+        border: 2px solid #5b5c56;
+        border-radius: 10px;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        color: #bbb;
+    }
+
+    .contact-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .contact-form button {
+        background-color: #13140f;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #5b5c56;
+    }
+</style>
+<div class="background-effect"></div>
+
+{% endblock %}
